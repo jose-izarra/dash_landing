@@ -11,7 +11,6 @@ import {
   animate,
 } from "framer-motion";
 import { gsap } from "gsap";
-import Image from "next/image";
 
 const COLORS_TOP = ["#9B0000", "#ff0000", ];
 
@@ -28,7 +27,6 @@ export const Hero = () => {
   }, []);
 
     const backgroundImage = useMotionTemplate`radial-gradient(135% 135% at 40% 0%, #171717 50%, ${color})`;
-    const border = useMotionTemplate`0.5px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 20px ${color}`;
     const backgroundColor = useMotionTemplate`${color}`
 
