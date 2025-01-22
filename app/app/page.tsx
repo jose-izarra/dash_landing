@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 export default function Home() {
   return (
     <div className="">
-        <main className="cursor-none">
+        <main className="sm:cursor-none">
             <Hero />
         </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center fixed bottom-0 w-full p-4  text-gray-100 ">

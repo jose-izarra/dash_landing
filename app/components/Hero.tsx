@@ -150,7 +150,7 @@ export const Hero = () => {
         </motion.section>
         <motion.div
             ref={cursorRef}
-            className={`size-6 ${styles.cursor}`}
+            className={`size-6 ${styles.cursor} hidden sm:block`}
             style={{
                 boxShadow,
                 backgroundColor
