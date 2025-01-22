@@ -11,6 +11,7 @@ import {
   animate,
 } from "framer-motion";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const COLORS_TOP = ["#9B0000", "#ff0000", ];
 
@@ -80,6 +81,12 @@ export const Hero = () => {
         window.removeEventListener("mousemove", handleMouseMove);
       };
   }, [])
+
+  const handleClick = () => {
+
+  }
+
+
   return (
     <>
 
@@ -88,15 +95,12 @@ export const Hero = () => {
         backgroundImage,
       }}
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
-    >
+        >
       <div className="relative z-10 flex flex-col items-center">
-        <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
-          Beta Now Live!
-        </span>
         <h1
             className="max-w-3xl bg-gradient-to-br from-primary to-primary
-            bg-clip-text text-center text-3xl font-black leading-tight
-            text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight "
+            bg-clip-text text-center text-6xl font-black leading-tight
+            text-transparent sm:text-6xl sm:leading-tight md:text-7xl md:leading-tight "
             style={{
                 // textShadow: `0 0 60px var(--primary), 0 0 80px var(--primary)`
             }}
@@ -104,42 +108,56 @@ export const Hero = () => {
           {/* Decrease your SaaS churn by over 90% */}
           DASH
         </h1>
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, et,
-          distinctio eum impedit nihil ipsum modi.
+        <p className="mt-6 mb-1 max-w-xl text-center text-xl leading-relaxed md:text-2xl md:leading-relaxed font-bold">
+            ¡Revoluciona la gestión de tu local!
         </p>
-        <motion.button
-          style={{
-            border,
-            boxShadow,
-          }}
-          whileHover={{
-            scale: 1.015,
-          }}
-          whileTap={{
-            scale: 0.985,
-          }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-        >
-          Start free trial
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-        </motion.button>
+        <p className="my-3 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed mb-8 font-light ">
+            Aumenta tus ingresos con la plataforma más ágil del mercado:
+        </p>
+
+        <ul className="max-w-xl grid grid-cols-2 gap-5 items-center text-sm md:text-base w-full font-light text-foreground ">
+            <li className="px-1 sm:px-8 py-3 bg-neutral-800/80 backdrop-blur rounded-3xl text-center h-24 flex items-center justify-center hover:bg-neutral-700/80 transition-colors duration-300">
+                Estadísticas en tiempo real para tomar decisiones inteligentes.
+            </li>
+            <li className="px-1 sm:px-8 py-3  bg-neutral-800/80 backdrop-blur rounded-3xl text-center h-24 flex items-center justify-center hover:bg-neutral-700/80 transition-colors duration-300">
+                Gestión eficiente de equipos de promoción y su desempeño.
+            </li>
+            <li className="px-1 sm:px-8 py-3  bg-neutral-800/80 backdrop-blur rounded-3xl text-center h-24 flex items-center justify-center hover:bg-neutral-700/80 transition-colors duration-300">
+            Venta rápida de mesas, boletas y listas de invitados.
+            </li>
+            <li className="px-1 sm:px-8 py-3  bg-neutral-800/80 backdrop-blur rounded-3xl text-center h-24 flex items-center justify-center hover:bg-neutral-700/80 transition-colors duration-300">
+            Control total de asistentes desde nuestra app móvil.
+            </li>
+        </ul>
+        <a
+            href="mailto:thehousegm@gmail.com?subject=Quiero mejorar la gestión de mi local con Dash!"
+            >
+            <motion.button
+                onClick={handleClick}
+                whileHover={{
+                    scale: 1.015,
+                }}
+                whileTap={{
+                    scale: 0.985,
+                }}
+                className="cursor-none group relative flex w-fit items-center gap-1.5 mt-14 rounded-full bg-gray-950/40 px-5 py-3 text-gray-50 transition-colors hover:bg-gray-950/60"
+            >
+            Contáctanos
+            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+            </motion.button>
+        </a>
       </div>
 
-      <div className="absolute inset-0 z-0">
-        {/* <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
-        </Canvas> */}
-      </div>
-    </motion.section>
-    <motion.div
-        ref={cursorRef}
-        className={`size-6 ${styles.cursor}`}
-        style={{
-            boxShadow,
-            backgroundColor
-        }}
-        ></motion.div>
+
+        </motion.section>
+        <motion.div
+            ref={cursorRef}
+            className={`size-6 ${styles.cursor}`}
+            style={{
+                boxShadow,
+                backgroundColor
+            }}
+            ></motion.div>
     </>
 
   );
