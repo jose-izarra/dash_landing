@@ -129,6 +129,7 @@ export const Hero = () => {
         </ul>
         <a
             href="mailto:thehousegm@gmail.com?subject=Quiero mejorar la gestión de mi local con Dash!"
+            className="cursor-none "
             >
             <motion.button
                 onClick={handleClick}
